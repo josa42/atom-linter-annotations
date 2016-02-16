@@ -1,5 +1,6 @@
 "use babel"
 
+import path from 'path'
 import Provider from '../lib/linter-annotations-provider'
 
 describe('Provider', () => {
@@ -32,7 +33,7 @@ describe('Provider', () => {
   describe('lint()', () => {
     it('should retuns 5 messages in `fixture.js`', () => {
       waitsForPromise(() => {
-        return atom.workspace.open('./files/fixture.js')
+        return atom.workspace.open(path.join(__dirname, 'files', 'fixture.js'))
           .then(editor => Provider.lint(editor))
           .then(messages => {
             expect(messages.length).toEqual(7)
@@ -69,7 +70,7 @@ describe('Provider', () => {
 
     it('should retuns 1 messages in `fixture.erb`', () => {
       waitsForPromise(() => {
-        return atom.workspace.open('./files/fixture.erb')
+        return atom.workspace.open(path.join(__dirname, 'files', 'fixture.erb'))
           .then(editor => Provider.lint(editor))
           .then(messages => {
             expect(messages.length).toEqual(1)
