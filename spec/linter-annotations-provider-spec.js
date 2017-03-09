@@ -2,6 +2,8 @@
 
 import path from 'path'
 import Provider from '../lib/linter-annotations-provider'
+fs = require('fs-plus')
+temp = require('temp').track()
 
 describe('Provider', () => {
 
@@ -9,6 +11,18 @@ describe('Provider', () => {
     waitsForPromise(() => atom.packages.activatePackage('linter-annotations'))
     waitsForPromise(() => atom.packages.activatePackage('language-javascript'))
     waitsForPromise(() => atom.packages.activatePackage('language-ruby'))
+
+    spyOn(atom.config, "load")
+    spyOn(atom.config, "save")
+    dotAtomPath = temp.path('atom-spec-config')
+    atom.config.configDirPath = dotAtomPath
+    atom.config.enablePersistence = true
+    atom.config.configFilePath = path.join(atom.config.configDirPath, "atom.config.cson")
+  })
+
+  afterEach(() => {
+    atom.config.enablePersistence = false
+    fs.removeSync(dotAtomPath)
   })
 
   describe('capitalize()', () => {
@@ -31,7 +45,7 @@ describe('Provider', () => {
   })
 
   describe('lint()', () => {
-    it('should retuns 5 messages in `fixture.js`', () => {
+    it('should retuns 7 messages in `fixture.js`', () => {
       waitsForPromise(() => {
         return atom.workspace.open(path.join(__dirname, 'files', 'fixture.js'))
           .then(editor => Provider.lint(editor))
