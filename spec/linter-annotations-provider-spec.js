@@ -11,7 +11,7 @@ describe('Provider', () => {
     waitsForPromise(() => atom.packages.activatePackage('linter-annotations'))
     waitsForPromise(() => atom.packages.activatePackage('language-javascript'))
     waitsForPromise(() => atom.packages.activatePackage('language-python'))
-    waitsForPromise(() => atom.packages.activatePackage('language-ruby'))
+    waitsForPromise(() => atom.packages.activatePackage('language-ruby-on-rails'))
     waitsForPromise(() => atom.packages.activatePackage('language-shellscript'))
 
     spyOn(atom.config, "load")

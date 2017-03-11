@@ -9,10 +9,15 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "atom-package-deps": "^4.0.1"
+    "atom-package-deps": "^4.0.1",
+    "atom-linter": "^9.0.1"
   },
   "package-deps": [
-    "linter"
+    "linter",
+    "language-javascript",
+    "language-python",
+    "language-ruby-on-rails",
+    "language-shellscript"
   ],
   "providedServices": {
     "linter": {
@@ -22,9 +27,10 @@
     }
   },
   "devDependencies": {
-    "babel-eslint": "^4.1.8",
-    "eslint": "^2.1.0",
-    "fs-plus": "2.10.1",
-    "temp": "0.8.1"
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.17.1",
+    "fs-plus": "3.0.0",
+    "temp": "0.8.3",
+    "npm-check-updates": "^2.8.8"
   }
 }
