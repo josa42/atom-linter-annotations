@@ -94,7 +94,7 @@ describe('Provider', () => {
             const warnings = messages.filter(message => message.type === 'Warning')
             expect(warnings.length).toEqual(1)
             expect(warnings[0].range).toEqual([[1, 4], [1, 22]])
-            expect(warnings[0].text).toEqual('TODO: Do somehting')
+            expect(warnings[0].text).toEqual('TODO: Do something')
           })
       })
     })
