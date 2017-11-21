@@ -1,7 +1,7 @@
 {
   "name": "linter-annotations",
   "main": "./lib/init",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Hightlights annotations like `TODO`, `FIXME` or `NOTE`",
   "repository": "https://github.com/josa42/atom-linter-annotations",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "atom-package-deps": "^4.0.1"
+    "atom-package-deps": "^4.6.0"
   },
   "package-deps": [
     "linter"
@@ -17,15 +17,19 @@
   "providedServices": {
     "linter": {
       "versions": {
-        "1.0.0": "provideLinter"
+        "2.0.0": "provideLinter"
       }
     }
   },
   "devDependencies": {
-    "babel-eslint": "^7.1.1",
-    "eslint": "^3.17.1",
-    "fs-plus": "3.0.0",
-    "temp": "0.8.3",
-    "npm-check-updates": "^2.8.8"
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "scripts": {
+    "test": "standard"
   }
 }
