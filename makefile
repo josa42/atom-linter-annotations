@@ -28,13 +28,8 @@ all: BUILDME
 BUILDME:
 	${srcdir}/BUILDME
 
-HEARTBEAT:
-	cd ${srcdir}
-	${DATE} --utc +%Y-%m > ${srcdir}/HEARTBEAT
-	${GIT} add HEARTBEAT
-
 npmInstall:
 	${NPM} install
 	${NPM} update
 
-.PHONY: all BUILDME HEARTBEAT npmInstall
+.PHONY: all BUILDME npmInstall
