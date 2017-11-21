@@ -13,11 +13,7 @@
     "atom-linter": "^9.0.1"
   },
   "package-deps": [
-    "linter",
-    "language-javascript",
-    "language-python",
-    "language-ruby-on-rails",
-    "language-shellscript"
+    "linter"
   ],
   "providedServices": {
     "linter": {
