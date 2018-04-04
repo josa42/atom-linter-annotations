@@ -3,6 +3,8 @@
 import path from 'path'
 import Provider from '../lib/linter-annotations-provider'
 
+const { atom, beforeEach, describe, expect, it, waitsForPromise } = global
+
 describe('Provider', () => {
   beforeEach(() => waitsForPromise(async () => {
     await atom.packages.activatePackage('linter-annotations')
