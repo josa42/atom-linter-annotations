@@ -1,7 +1,7 @@
 {
   "name": "linter-annotations",
   "main": "./lib/init",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Hightlights annotations like `TODO`, `FIXME` or `NOTE`",
   "repository": "https://github.com/josa42/atom-linter-annotations",
   "license": "MIT",
