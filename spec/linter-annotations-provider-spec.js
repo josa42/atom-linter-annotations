@@ -28,8 +28,8 @@ describe('Provider', () => {
 
   describe('trimCommentEnd()', () => {
     it('Should strip comment endings', () => {
-      expect(Provider.trimCommentEnd('/* test */')).toEqual('/* test')
-      expect(Provider.trimCommentEnd('<%# test %>')).toEqual('<%# test')
+      expect(Provider.trimCommentEnd('/* test */ remove')).toEqual('/* test')
+      expect(Provider.trimCommentEnd('<%# test %> remove')).toEqual('<%# test')
       expect(Provider.trimCommentEnd('<!-- test --> remove')).toEqual('<!-- test')
     })
   })
