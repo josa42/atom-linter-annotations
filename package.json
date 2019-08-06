@@ -1,14 +1,14 @@
 {
   "name": "linter-annotations",
   "main": "./lib/init",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Hightlights annotations like `TODO`, `FIXME` or `NOTE`",
   "repository": "https://github.com/josa42/atom-linter-annotations",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
   },
-    "scripts": {
+  "scripts": {
     "test": "standard"
   },
   "providedServices": {
