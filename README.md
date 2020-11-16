@@ -1,5 +1,6 @@
 # linter-annotations
 
+[![Test](https://github.com/josa42/atom-linter-annotations/workflows/Main/badge.svg?branch=master)](https://github.com/josa42/atom-linter-annotations/actions?query=workflow%3AMain)
 [![Build Status](https://img.shields.io/travis/josa42/atom-linter-annotations.svg?style=flat-square)](https://travis-ci.org/josa42/atom-linter-annotations)
 [![Plugin installs!](https://img.shields.io/apm/dm/linter-annotations.svg?style=flat-square)](https://atom.io/packages/linter-annotations)
 [![Package version!](https://img.shields.io/apm/v/linter-annotations.svg?style=flat-square)](https://atom.io/packages/linter-annotations)

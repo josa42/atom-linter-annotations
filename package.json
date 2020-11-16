@@ -9,7 +9,7 @@
     "atom": ">0.50.0"
   },
   "scripts": {
-    "test": "standard"
+    "lint": "eslint ."
   },
   "providedServices": {
     "linter": {
